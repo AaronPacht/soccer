@@ -14,50 +14,66 @@ document.addEventListener('DOMContentLoaded', (e)=>{
 
     spot2.addEventListener('mouseover', ()=>{
         topamount = mathplus(topamount);
-        ball.style.top= topamount+"px";
+        if (parseInt(topamount)<=window.innerHeight-25) {
+            ball.style.top= topamount+"px";
+        };
     });
     
     spot4.addEventListener('mouseover', ()=>{
         leftamount = mathplus(leftamount);
-        ball.style.left= leftamount+"px";
+        if (parseInt(leftamount)<=window.innerWidth-25) {
+            ball.style.left= leftamount+"px";
+        };
     });
 
     spot6.addEventListener('mouseover', ()=>{
         leftamount = mathminus(leftamount);
-        ball.style.left= leftamount+"px";
+        if (parseInt(leftamount)>=0) {
+            ball.style.left= leftamount+"px";
+        };
     });
 
     spot8.addEventListener('mouseover', ()=>{
         topamount = mathminus(topamount);
-        ball.style.top= topamount+"px";
+        if (parseInt(topamount)>=0) {
+            ball.style.top= topamount+"px";
+        };
     });
 
     spot1.addEventListener('mouseover', ()=>{
         topamount = mathplus(topamount);
         leftamount = mathplus(leftamount);
-        ball.style.top= topamount+"px";
-        ball.style.left= leftamount+"px";
+        if (parseInt(topamount)<=window.innerHeight-25 && parseInt(leftamount)<=window.innerWidth-25) {
+            ball.style.top= topamount+"px";
+            ball.style.left= leftamount+"px";
+        };
     });
 
     spot3.addEventListener('mouseover', ()=>{
         topamount = mathplus(topamount);
         leftamount = mathminus(leftamount);
-        ball.style.top= topamount+"px";
-        ball.style.left= leftamount+"px";
+        if (parseInt(topamount)<=window.innerHeight-25 && parseInt(leftamount)>=0) {
+            ball.style.top= topamount+"px";
+            ball.style.left= leftamount+"px";
+        };
     });
 
     spot7.addEventListener('mouseover', ()=>{
         topamount = mathminus(topamount);
         leftamount = mathplus(leftamount);
-        ball.style.top= topamount+"px";
-        ball.style.left= leftamount+"px";
+        if (parseInt(topamount)>=0 && parseInt(leftamount)<=window.innerWidth-25) {
+            ball.style.top= topamount+"px";
+            ball.style.left= leftamount+"px";
+        };
     });
 
     spot9.addEventListener('mouseover', ()=>{
         topamount = mathminus(topamount);
         leftamount = mathminus(leftamount);
-        ball.style.top= topamount+"px";
-        ball.style.left= leftamount+"px";
+        if (parseInt(topamount)>=0 && parseInt(leftamount)>=0) {
+            ball.style.top= topamount+"px";
+            ball.style.left= leftamount+"px";
+        };
     });
 
     let mathplus=(e)=> String(parseInt(e)+15);
