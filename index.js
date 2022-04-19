@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', (e)=>{
         topamount = mathplus(topamount);
         if (parseInt(topamount)<=window.innerHeight-25) {
             ball.style.top= topamount+"px";
+        } else {
+            ball.style.top=window.innerHeight-50+"px";
         };
     });
     
@@ -23,6 +25,8 @@ document.addEventListener('DOMContentLoaded', (e)=>{
         leftamount = mathplus(leftamount);
         if (parseInt(leftamount)<=window.innerWidth-25) {
             ball.style.left= leftamount+"px";
+        } else {
+            ball.style.left=window.innerWidth-50+"px";
         };
     });
 
@@ -30,6 +34,8 @@ document.addEventListener('DOMContentLoaded', (e)=>{
         leftamount = mathminus(leftamount);
         if (parseInt(leftamount)>=0) {
             ball.style.left= leftamount+"px";
+        } else {
+            ball.style.left=25+"px";
         };
     });
 
@@ -37,6 +43,8 @@ document.addEventListener('DOMContentLoaded', (e)=>{
         topamount = mathminus(topamount);
         if (parseInt(topamount)>=0) {
             ball.style.top= topamount+"px";
+        } else {
+            ball.style.top=25+"px";
         };
     });
 
@@ -46,6 +54,15 @@ document.addEventListener('DOMContentLoaded', (e)=>{
         if (parseInt(topamount)<=window.innerHeight-25 && parseInt(leftamount)<=window.innerWidth-25) {
             ball.style.top= topamount+"px";
             ball.style.left= leftamount+"px";
+        } else {
+            if (parseInt(topamount)<=window.innerHeight-25) {
+                ball.style.top= topamount+"px";
+                ball.style.left=window.innerWidth-50+"px";
+            }
+            if (parseInt(leftamount)<=window.innerWidth-25) {
+                ball.style.left= leftamount+"px";
+                ball.style.top=window.innerHeight-50+"px";
+            }
         };
     });
 
@@ -55,6 +72,15 @@ document.addEventListener('DOMContentLoaded', (e)=>{
         if (parseInt(topamount)<=window.innerHeight-25 && parseInt(leftamount)>=0) {
             ball.style.top= topamount+"px";
             ball.style.left= leftamount+"px";
+        } else {
+            if (parseInt(topamount)<=window.innerHeight-25) {
+                ball.style.top= topamount+"px";
+                ball.style.left=25+"px";
+            }
+            if (parseInt(leftamount)>=0) {
+                ball.style.left= leftamount+"px";
+                ball.style.top=window.innerHeight-50+"px";
+            }
         };
     });
 
@@ -64,6 +90,15 @@ document.addEventListener('DOMContentLoaded', (e)=>{
         if (parseInt(topamount)>=0 && parseInt(leftamount)<=window.innerWidth-25) {
             ball.style.top= topamount+"px";
             ball.style.left= leftamount+"px";
+        } else {
+            if (parseInt(topamount)>=0) {
+                ball.style.top= topamount+"px";
+                ball.style.left=window.innerWidth-50+"px";
+            }
+            if (parseInt(leftamount)<=window.innerWidth-25) {
+                ball.style.left= leftamount+"px";
+                ball.style.top=25+"px";
+            }
         };
     });
 
@@ -73,6 +108,15 @@ document.addEventListener('DOMContentLoaded', (e)=>{
         if (parseInt(topamount)>=0 && parseInt(leftamount)>=0) {
             ball.style.top= topamount+"px";
             ball.style.left= leftamount+"px";
+        } else {
+            if (parseInt(topamount)>=0) {
+                ball.style.top= topamount+"px";
+                ball.style.left=25+"px";
+            }
+            if (parseInt(leftamount)>=0) {
+                ball.style.left= leftamount+"px";
+                ball.style.top=25+"px";
+            }
         };
     });
 
